@@ -1,12 +1,13 @@
 /* Show menu */
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const hamburger = document.querySelector(".btn-hamburger");
+const navMenu = document.querySelector(".nav-menu"); 
 
 hamburger.addEventListener("click", mobileMenu);
 
 function mobileMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
+
 }
 
 /* Close menu when click a link or outside the menu */
