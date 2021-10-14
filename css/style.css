@@ -98,11 +98,20 @@ a{
 }
 
 .hamburger {
+    width: 2.2rem;
+    height: 1.8rem;
+    background-color: transparent;
+    border-style: none;
+}
+
+.btn-hamburger{
     display: none;
+    width: 2.2rem;
 }
 
 .bar {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 25px;
     height: 3px;
     margin: 5px auto;
@@ -141,7 +150,6 @@ a{
     }
 
     .nav-dropdown li{
-        
         width: 100vw;
     }
 
@@ -151,17 +159,13 @@ a{
         display: inline-block;
     }
 
-
-    
-
-
     .nav-item{
         padding: 1.2rem 0;
         margin: 0;
     }
 
 
-    .nav-menu.active {
+    .nav-menu.active{
         top: 3.5rem;
     }
 
@@ -169,20 +173,27 @@ a{
         padding: 1rem 50rem;
     }
 
+    .btn-hamburger{
+        display: block;
+        position: relative;
+    }
+
     .hamburger{
+        position: absolute;
+        top: 0;
         display: block;
         cursor: pointer;
     }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
+    
+    .btn-hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
 
-    .hamburger.active .bar:nth-child(3) {
+    .btn-hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .btn-hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
     
