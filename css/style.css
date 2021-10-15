@@ -16,6 +16,11 @@ a{
 
 }
 
+.initial-navbar{
+    height: 1.3rem;
+    background-color: rgb(63, 5, 5);
+}
+
 .navbar{
     position: fixed;
     width: 100vw;
@@ -43,21 +48,21 @@ a{
 
 .nav-item{
     position: relative;
-    padding: 1.2rem 0;
+    padding: 1rem 0;
     margin: 0;
 }
 
 .nav-link{
     color: rgb(241, 182, 182);
     align-items: center;
-    padding: 1.2rem;
+    padding: .5rem 1.2rem;
     margin: 0 .1rem;
 }
 
 
 .nav-link:hover{
-    background-color: rgb(179, 40, 40, 0.8);
-    transition: all .3s ease 0s;
+    border-bottom-style: solid;
+    border-color: rgba(209, 94, 94, 0.8);
 }
 
 /* Position absolute to nav-item */
