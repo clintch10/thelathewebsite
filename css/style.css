@@ -3,8 +3,8 @@
 :root{
     --primary-color: rgb(170,0,0);
     --menu-color: rgb(221, 206, 206);
+    --nav-hover: rgba(255, 108, 108, 0.3);
 }
-
 
 *{
     margin: 0;
@@ -19,10 +19,10 @@ li{
 
 a{
     text-decoration: none;
-
 }
 
 .navbar{
+    padding: 0;
     position: fixed;
     width: 100vw;
     background-color: var(--primary-color);
@@ -30,11 +30,11 @@ a{
     justify-content: space-around;
     align-items: center;
     margin: 0;
-    padding: 0 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.52);
 }
 
 .nav-logo img{
+    margin: 0;
     height: 4em;
     color: var(--menu-color);
     font-weight: 900;
@@ -50,30 +50,38 @@ a{
 
 .nav-item{
     position: relative;
-    padding: 1.2rem 0;
+    padding: 0 0;
     margin: 0;
+    font-weight: 500;
+    font-size: .9rem;
+    text-transform: uppercase;
 }
 
 .nav-link{
     color: var(--menu-color);
     align-items: center;
     padding: 1.2rem;
-    margin: 0 .1rem;
+    margin: 0;
 }
 
+.nav-link a{
+    margin: 0;
+    color: var(--menu-color);
+}
 
 .nav-link:hover{
-    background-color: rgba(231, 91, 91, 0.3);
+    color: var(--menu-color);
     border-radius: 5%;
     transition: all .3s ease 0s;
+    background-color: var(--nav-hover);
 }
 
 /* Position absolute to nav-item */
 .nav-dropdown{
     position: absolute;
-    top: 3.6rem;
+    top: 3.7rem;
     left: .1rem;
-    background-color: rgb(160, 46, 46);
+    background-color: var(--primary-color);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.52);
     border-radius: .2em;
     display: flex;
@@ -81,6 +89,7 @@ a{
     opacity: 0;
     visibility: hidden;
     transition: opacity 200ms ease-in-out;
+    padding: 0;
 }
 
 .nav-item:hover .nav-dropdown, .nav-item:focus .nav-dropdown, .nav-link:hover .nav-dropdown, .nav-link:focus .nav-dropdown{
@@ -97,11 +106,12 @@ a{
     display: inline-block;
     width: 100%;
     padding: .8em 1rem;
-    color: rgb(241, 182, 182);
+    color: var(--menu-color);
 }
 
 .nav-sublink:hover{
-    background-color: rgb(179, 40, 40, 0.8);
+    color: var(--menu-color);
+    background-color: var(--nav-hover);
     transition: all .3s ease 0s;
 }
 
@@ -142,10 +152,11 @@ a{
         transition: 0.3s;
         box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
         z-index: -1;
+        
     }
 
     .nav-link:hover{
-        background-color: rgb(179, 40, 40, 0.8);
+        background-color: var(--nav-hover);
         transition: all .3s ease 0s;
     }
 
@@ -159,13 +170,13 @@ a{
     }
 
     .nav-item:hover .nav-dropdown, .nav-item:focus .nav-dropdown{
-        top: 1rem;
+        top: .3rem;
         left: 0;
         display: inline-block;
     }
 
     .nav-item{
-        padding: 1.2rem 0;
+        padding: 0;
         margin: 0;
     }
 
